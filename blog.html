@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Блог — Щит статусу</title>
+  <meta name="description" content="Пояснення, інструкції та розбір типових помилок у спорах щодо військових пенсій.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">практичні статті</p>
+      <p class="preloader__title" id="preloader-title">Блог</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="blog" id="blog">
+      <div class="blog__head">
+        <h1 class="blog__title" data-split>Блог</h1>
+      </div>
+      <div class="blog__list">
+        <article class="blog-item" data-blog-item>
+          <p class="blog-item__date">06.04.2026</p>
+          <h3 class="blog-item__title">Що робити, якщо ПФУ не врахував стаж</h3>
+          <p class="blog-item__text">Короткий чекліст: докази, порядок звернення, строки та типові помилки, через які справа «зависає».</p>
+        </article>
+        <article class="blog-item" data-blog-item>
+          <p class="blog-item__date">23.03.2026</p>
+          <h3 class="blog-item__title">Перерахунок військової пенсії: покроково</h3>
+          <p class="blog-item__text">Розбираю, коли є підстава на перерахунок і як правильно оформити заяву, щоб не втратити місяці.</p>
+        </article>
+        <article class="blog-item" data-blog-item>
+          <p class="blog-item__date">02.03.2026</p>
+          <h3 class="blog-item__title">Судовий етап без хаосу: що готувати заздалегідь</h3>
+          <p class="blog-item__text">Які документи збирати до позову, як структурувати позицію та чому важливий контроль виконання.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="consultation">
+      <div class="contact__grid">
+        <div class="contact__copy">
+          <h2 class="contact__title" data-split>Потрібна індивідуальна стратегія?</h2>
+          <p class="contact__lead" data-word-reveal>Якщо у вас схожа ситуація — напишіть коротко, і я підкажу, з якої статті та якого кроку почати саме вам.</p>
+        </div>
+        <form class="contact__form" id="cta-form">
+          <label class="fld">
+            <span class="fld__l">Ім’я</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="">
+          </label>
+          <label class="fld">
+            <span class="fld__l">Телефон або e-mail</span>
+            <input type="text" name="contact" required autocomplete="off" placeholder="+380">
+          </label>
+          <label class="fld fld--full">
+            <span class="fld__l">Коротко про ситуацію</span>
+            <textarea name="msg" rows="4" placeholder=""></textarea>
+          </label>
+          <button type="submit" class="btn btn--solid btn--block" data-mag>Надіслати</button>
+          <p class="contact__note" id="cta-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

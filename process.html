@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Процес роботи — Щит статусу</title>
+  <meta name="description" content="Окрема сторінка процесу: етапи роботи від аудиту документів до виконання рішення.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">етапи супроводу</p>
+      <p class="preloader__title" id="preloader-title">Процес</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="timeline-sec timeline-sec--light">
+      <div class="timeline-sec__head"><h1 class="timeline-sec__title" data-split>Процес роботи</h1></div>
+      <div class="timeline" id="timeline">
+        <div class="timeline__rail" aria-hidden="true"><span class="timeline__rail-fill"></span></div>
+        <article class="timeline__step" data-step><span class="timeline__n">I</span><h3 data-split>Первинний аудит</h3><p data-word-reveal>Перевірка документів, стажу, попередніх рішень ПФУ та формування юридичної позиції.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">II</span><h3 data-split>Досудова робота</h3><p data-word-reveal>Підготовка заяв, скарг і фіксація строків, щоб створити процесуальну базу для суду.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">III</span><h3 data-split>Судовий розгляд</h3><p data-word-reveal>Подача позову, участь у засіданнях, доказова аргументація та апеляційний етап за потреби.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">IV</span><h3 data-split>Виконання</h3><p data-word-reveal>Контроль виконання рішення: перерахунок, виплата заборгованості, оновлення даних у ПФУ.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

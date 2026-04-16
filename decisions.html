@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Рішення суду — Щит статусу</title>
+  <meta name="description" content="Судова практика у спорах щодо військових пенсій: кейси, підходи, висновки.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">судова практика</p>
+      <p class="preloader__title" id="preloader-title">Рішення суду</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="library" id="decisions">
+      <div class="library__head">
+        <h1 class="library__title" data-split>Рішення суду</h1>
+        <p class="library__intro" data-word-reveal>Добірка типових справ у спорах із ПФУ. Тут показано, як виглядає логіка захисту та що реально впливає на результат.</p>
+      </div>
+      <div class="library__grid">
+        <article class="doc-card" data-doc-card>
+          <p class="doc-card__meta">Київ · 2025</p>
+          <h3 class="doc-card__title">Перерахунок після відмови ПФУ</h3>
+          <p class="doc-card__text">Суд визнав протиправною відмову в урахуванні вислуги та зобов'язав провести перерахунок із виплатою заборгованості.</p>
+          <a href="contact.html" class="doc-card__link">Розібрати подібну справу</a>
+        </article>
+        <article class="doc-card" data-doc-card>
+          <p class="doc-card__meta">Дніпро · 2024</p>
+          <h3 class="doc-card__title">Виплата недоплати за 18 місяців</h3>
+          <p class="doc-card__text">Позитивне рішення щодо недоплати після помилкового коефіцієнта. Виплату отримано після контролю етапу виконання.</p>
+          <a href="contact.html" class="doc-card__link">Отримати алгоритм дій</a>
+        </article>
+        <article class="doc-card" data-doc-card>
+          <p class="doc-card__meta">Львів · 2026</p>
+          <h3 class="doc-card__title">Скасування повторної відмови</h3>
+          <p class="doc-card__text">Після апеляції рішення першої інстанції залишено в силі: ПФУ зобов'язано включити спірні періоди служби.</p>
+          <a href="contact.html" class="doc-card__link">Оцінити перспективу</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="consultation">
+      <div class="contact__grid">
+        <div class="contact__copy">
+          <h2 class="contact__title" data-split>Розбір вашої справи</h2>
+          <p class="contact__lead" data-word-reveal>Надішліть короткий опис: стаж, відмова чи заниження. Підкажу, яке рішення з практики максимально близьке до вашої ситуації.</p>
+          <ul class="contact__bullets">
+            <li>Конфіденційно</li>
+            <li>Онлайн по Україні</li>
+            <li>Фокус на результат</li>
+          </ul>
+        </div>
+        <form class="contact__form" id="cta-form">
+          <label class="fld">
+            <span class="fld__l">Ім’я</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="">
+          </label>
+          <label class="fld">
+            <span class="fld__l">Телефон або e-mail</span>
+            <input type="text" name="contact" required autocomplete="off" placeholder="+380">
+          </label>
+          <label class="fld fld--full">
+            <span class="fld__l">Коротко про ситуацію</span>
+            <textarea name="msg" rows="4" placeholder=""></textarea>
+          </label>
+          <button type="submit" class="btn btn--solid btn--block" data-mag>Надіслати</button>
+          <p class="contact__note" id="cta-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

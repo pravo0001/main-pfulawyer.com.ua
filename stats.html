@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Цифри та аналітика — Щит статусу</title>
+  <meta name="description" content="Ключові показники практики у спорах з ПФУ щодо військових пенсій.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">показники практики</p>
+      <p class="preloader__title" id="preloader-title">Цифри</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="metrics">
+      <div class="metrics__grid">
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="15">0</span><span class="metric__unit">років</span></span><p class="metric__cap">практики у спорах щодо військових пенсій</p></div>
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="380">0</span><span class="metric__unit">+</span></span><p class="metric__cap">ведених ситуацій та консультацій</p></div>
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="24">0</span><span class="metric__unit">год</span></span><p class="metric__cap">орієнтир часу першої відповіді</p></div>
+      </div>
+    </section>
+
+    <section class="library">
+      <div class="library__head">
+        <h2 class="library__title" data-split>Що стоїть за цифрами</h2>
+        <p class="library__intro" data-word-reveal>Кожен показник — це не просто статистика, а завершені справи: від первинної відмови ПФУ до фактичної виплати клієнту.</p>
+      </div>
+      <div class="library__grid">
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Ефективність</p><h3 class="doc-card__title">Сильний досудовий блок</h3><p class="doc-card__text">Частину спорів вдається вирішити без затяжного процесу, якщо грамотно сформувати пакет і претензію.</p></article>
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Контроль</p><h3 class="doc-card__title">Не тільки рішення, а й виплата</h3><p class="doc-card__text">Результат рахується після фактичного виконання: перерахунок у ПФУ і надходження коштів.</p></article>
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Прозорість</p><h3 class="doc-card__title">Регулярний фідбек клієнту</h3><p class="doc-card__text">Клієнт розуміє, що робиться на кожному етапі, які строки та наступні кроки.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

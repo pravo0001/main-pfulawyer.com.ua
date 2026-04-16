@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Напрями роботи — Щит статусу</title>
+  <meta name="description" content="Окрема сторінка напрямів: призначення пенсії, перерахунок, судовий супровід.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">окрема сторінка</p>
+      <p class="preloader__title" id="preloader-title">Напрями</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="work">
+      <header class="work__head">
+        <h1 class="work__title" data-split>Напрями роботи</h1>
+        <p class="work__intro" data-word-reveal>Три основні напрямки, з якими найчастіше звертаються військові пенсіонери та ветерани.</p>
+      </header>
+      <ul class="work__list">
+        <li class="work-item" data-work-item><span class="work-item__ix">01</span><div class="work-item__body"><h3 class="work-item__title">Призначення пенсії</h3><p class="work-item__text">Оцінка вислуги, перевірка стажу, формування пакета документів до ПФУ.</p></div><span class="work-item__tag">старт</span></li>
+        <li class="work-item" data-work-item><span class="work-item__ix">02</span><div class="work-item__body"><h3 class="work-item__title">Перерахунок</h3><p class="work-item__text">Виявлення помилок у розрахунку та стягнення недоплат за попередні періоди.</p></div><span class="work-item__tag">перерахунок</span></li>
+        <li class="work-item" data-work-item><span class="work-item__ix">03</span><div class="work-item__body"><h3 class="work-item__title">Судовий супровід</h3><p class="work-item__text">Адмінпозов, апеляція, контроль фактичного виконання рішення суду.</p></div><span class="work-item__tag">суд</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

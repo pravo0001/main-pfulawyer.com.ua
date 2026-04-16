@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Щит статусу — головна про ПФУ і рішення проблем</title>
+  <meta name="description" content="Велика головна сторінка про Пенсійний фонд України: типові відмови, алгоритми дій, проблеми та рішення у військових пенсіях.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">головна сторінка</p>
+      <p class="preloader__title" id="preloader-title">Щит статусу</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy" id="hero-copy">
+          <p class="hero__overline">Пенсійний фонд України · військові пенсії · головний гайд</p>
+          <h1 class="hero__h1">
+            <span class="hero__h1-line" data-split>ПФУ без хаосу:</span>
+            <span class="hero__h1-line hero__h1-line--serif" data-split>проблеми</span>
+            <span class="hero__h1-line" data-split>і робочі рішення.</span>
+          </h1>
+          <p class="hero__deck" data-word-reveal>Це головна сторінка з максимальною концентрацією практичної інформації: типові відмови ПФУ, причини затримок, алгоритми дій, строки, пакети документів та судові маршрути.</p>
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn--solid" data-mag>Отримати розбір</a>
+            <a href="faq.html" class="btn btn--line" data-mag>Швидкі відповіді</a>
+          </div>
+        </div>
+        <div class="hero__panel" id="hero-panel" aria-hidden="true">
+          <div class="hero__panel-inner">
+            <div class="hero__mono" data-float>ПФУ</div>
+            <div class="hero__stack">
+              <span class="hero__rect hero__rect--a"></span>
+              <span class="hero__rect hero__rect--b"></span>
+              <span class="hero__rect hero__rect--c"></span>
+            </div>
+            <p class="hero__panel-cap">Від заявки до виконання рішення</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll"><span>Гортайте</span><span class="hero__scroll-line"></span></div>
+    </section>
+
+    <section class="stripe" aria-hidden="true">
+      <div class="stripe__track" data-stripe>
+        <span>ПФУ — відмова — перерахунок — адміністративний позов — апеляція — виконання —</span>
+        <span>ПФУ — відмова — перерахунок — адміністративний позов — апеляція — виконання —</span>
+      </div>
+    </section>
+
+    <section class="work">
+      <header class="work__head">
+        <h2 class="work__title" data-split>Найчастіші проблеми з ПФУ</h2>
+        <p class="work__intro" data-word-reveal>На практиці більшість звернень повторює один і той самий набір причин. Якщо бачите свою ситуацію — переходьте у відповідний розділ меню.</p>
+      </header>
+      <ul class="work__list">
+        <li class="work-item" data-work-item><span class="work-item__ix">01</span><div class="work-item__body"><h3 class="work-item__title">Не врахували повний стаж</h3><p class="work-item__text">ПФУ не включає спірні періоди служби, навчання або перерахунок вислуги за спеціальними умовами.</p></div><span class="work-item__tag">стаж</span></li>
+        <li class="work-item" data-work-item><span class="work-item__ix">02</span><div class="work-item__body"><h3 class="work-item__title">Занижений коефіцієнт</h3><p class="work-item__text">Пенсію обчислено за невірними коефіцієнтами, через що формується системна недоплата за попередні періоди.</p></div><span class="work-item__tag">розрахунок</span></li>
+        <li class="work-item" data-work-item><span class="work-item__ix">03</span><div class="work-item__body"><h3 class="work-item__title">Відмова без належного мотивування</h3><p class="work-item__text">Рішення ПФУ містить формальні посилання без аналізу доказів і без реальної перевірки ваших документів.</p></div><span class="work-item__tag">відмова</span></li>
+      </ul>
+    </section>
+
+    <section class="timeline-sec">
+      <div class="timeline-sec__head"><h2 class="timeline-sec__title" data-split>Алгоритм вирішення проблеми</h2></div>
+      <div class="timeline" id="timeline">
+        <div class="timeline__rail" aria-hidden="true"><span class="timeline__rail-fill"></span></div>
+        <article class="timeline__step" data-step><span class="timeline__n">I</span><h3 data-split>Аудит справи</h3><p data-word-reveal>Збираємо пакет, виявляємо слабкі місця, фіксуємо підстави для перерахунку або оскарження.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">II</span><h3 data-split>Звернення до ПФУ</h3><p data-word-reveal>Подаємо структуровану заяву з доказами і контролем строків відповіді.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">III</span><h3 data-split>Судовий етап</h3><p data-word-reveal>За відмови або бездіяльності готуємо адміністративний позов та вимоги щодо виплати заборгованості.</p></article>
+        <article class="timeline__step" data-step><span class="timeline__n">IV</span><h3 data-split>Виконання рішення</h3><p data-word-reveal>Контролюємо фактичне внесення змін у реєстри та реальне надходження коштів.</p></article>
+      </div>
+    </section>
+
+    <section class="library">
+      <div class="library__head">
+        <h2 class="library__title" data-split>Куди перейти далі</h2>
+        <p class="library__intro" data-word-reveal>Головна дає картину цілком. Деталі винесені в окремі сторінки меню.</p>
+      </div>
+      <div class="library__grid">
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Практика</p><h3 class="doc-card__title">Рішення суду</h3><p class="doc-card__text">Реальні сценарії по перерахунку, недоплатах та повторних відмовах.</p><a href="decisions.html" class="doc-card__link">Перейти</a></article>
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Пояснення</p><h3 class="doc-card__title">Блог і FAQ</h3><p class="doc-card__text">Покрокові матеріали та відповіді на типові питання без зайвої термінології.</p><a href="blog.html" class="doc-card__link">Відкрити блог</a></article>
+        <article class="doc-card" data-doc-card><p class="doc-card__meta">Підготовка</p><h3 class="doc-card__title">Документи та шаблони</h3><p class="doc-card__text">Шаблони заяв, скарг і чеклісти для підготовки до ПФУ та суду.</p><a href="resources.html" class="doc-card__link">Отримати шаблони</a></article>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metrics__grid">
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="7">0</span><span class="metric__unit">+</span></span><p class="metric__cap">окремих сторінок меню для різних задач</p></div>
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="15">0</span><span class="metric__unit">років</span></span><p class="metric__cap">фокусу на пенсійних і соціальних спорах</p></div>
+        <div class="metric" data-metric><span class="metric__val"><span class="metric__num" data-count="24">0</span><span class="metric__unit">год</span></span><p class="metric__cap">орієнтовний час першого фідбеку</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

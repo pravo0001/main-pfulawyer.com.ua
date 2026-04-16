@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зв’язок — Щит статусу</title>
+  <meta name="description" content="Зв'яжіться щодо військової пенсії та спорів з ПФУ: заявка, офіс у Києві, карта.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__box">
+      <p class="preloader__label">заявка на розбір</p>
+      <p class="preloader__title" id="preloader-title">Зв’язок</p>
+      <div class="preloader__rule"><span class="preloader__rule-fill"></span></div>
+    </div>
+  </div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="head" id="site-header">
+    <div class="head__inner">
+      <a href="index.html" class="head__logo" data-mag>Щит статусу</a>
+      <nav class="head__nav" aria-label="Навігація">
+        <a href="practice.html" data-mag>Напрями</a>
+        <a href="process.html" data-mag>Процес</a>
+        <a href="decisions.html" data-mag>Рішення суду</a>
+        <a href="blog.html" data-mag>Блог</a>
+        <a href="faq.html" data-mag>FAQ</a>
+        <a href="resources.html" data-mag>Документи</a>
+        <a href="stats.html" data-mag>Цифри</a>
+        <a href="contact.html" class="head__cta" data-mag>Зв’язок</a>
+      </nav>
+      <button type="button" class="head__burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Меню"></button>
+    </div>
+    <div class="head__drawer" id="nav-drawer" hidden>
+      <a href="practice.html">Напрями</a>
+      <a href="process.html">Процес</a>
+      <a href="decisions.html">Рішення суду</a>
+      <a href="blog.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="resources.html">Документи</a>
+      <a href="stats.html">Цифри</a>
+      <a href="contact.html">Зв’язок</a>
+    </div>
+  </header>
+
+  <main id="top" class="contact-new">
+    <section class="contact-new__hero" id="consultation" aria-label="Заявка">
+      <div class="contact-new__hero-inner">
+        <header class="contact-new__head">
+          <h1 class="work__title" data-split>Зв’язок</h1>
+          <p class="work__intro contact-page__text" data-word-reveal>Опишіть вашу ситуацію щодо пенсії, відмови або недоплати. Отримаєте короткий план дій і перелік документів для старту.</p>
+        </header>
+
+        <div class="contact-new__grid">
+          <aside class="contact-new__panel">
+            <h2 class="contact-new__panel-title">Як проходить первинний розбір</h2>
+            <ul class="contact-page__list contact-new__list">
+              <li>Пишете суть проблеми у формі</li>
+              <li>Отримуєте відповідь з орієнтиром по кроках</li>
+              <li>За потреби узгоджуємо подальший супровід</li>
+            </ul>
+            <div class="contact-new__chips">
+              <span>Конфіденційно</span>
+              <span>Онлайн по Україні</span>
+              <span>Відповідь до 24 год</span>
+            </div>
+          </aside>
+
+          <form class="contact-page__form contact-new__form" id="cta-form">
+            <label class="fld">
+              <span class="fld__l">Ім’я</span>
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label class="fld">
+              <span class="fld__l">Телефон або e-mail</span>
+              <input type="text" name="contact" required autocomplete="off" placeholder="+380">
+            </label>
+            <label class="fld fld--full">
+              <span class="fld__l">Коротко про ситуацію</span>
+              <textarea name="msg" rows="5"></textarea>
+            </label>
+            <button type="submit" class="btn btn--solid btn--block" data-mag>Надіслати заявку</button>
+            <p class="contact-page__note" id="cta-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-new__map" id="office" aria-labelledby="map-heading">
+      <div class="contact-new__map-inner">
+        <div class="contact-new__map-copy">
+          <h2 class="library__title" id="map-heading" data-split>Офіс у Києві</h2>
+          <p class="contact-new__addr">бульвар Лесі Українки, 28, м. Київ, Україна</p>
+          <a
+            class="contact-page__map-link"
+            href="https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9B%D0%B5%D1%81%D1%96%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8%2C%2028%2C%20%D0%9A%D0%B8%D1%97%D0%B2"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-mag
+          >Відкрити в Google Maps</a>
+        </div>
+        <div class="contact-page__map-frame contact-new__map-frame">
+          <iframe
+            title="бульвар Лесі Українки, 28, Київ"
+            src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9B%D0%B5%D1%81%D1%96%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8%2C%2028%2C%20%D0%9A%D0%B8%D1%97%D0%B2&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="site-footer">
+    <div class="foot__row">
+      <span data-foot>© <span id="year"></span> Щит статусу</span>
+      <span class="foot__hint" data-foot>Інформація довідкова; не оферта</span>
+      <a href="#top" data-foot>Нагору</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
