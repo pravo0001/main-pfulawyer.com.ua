@@ -9,17 +9,28 @@
   const body = document.body;
   const yearEl = document.getElementById("year");
 
+  body.classList.add("is-loading");
+
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   function splitChars(el) {
-    const text = el.textContent;
+    const text = el.textContent.trim();
+    if (!text) return;
+    const words = text.split(/\s+/);
     el.textContent = "";
-    for (const ch of text) {
-      const span = document.createElement("span");
-      span.className = "char";
-      span.textContent = ch === " " ? "\u00A0" : ch;
-      el.appendChild(span);
-    }
+    words.forEach((word, wi) => {
+      const wordWrap = document.createElement("span");
+      wordWrap.className = "word-chunk";
+      wordWrap.style.whiteSpace = "nowrap";
+      for (const ch of word) {
+        const span = document.createElement("span");
+        span.className = "char";
+        span.textContent = ch;
+        wordWrap.appendChild(span);
+      }
+      el.appendChild(wordWrap);
+      if (wi < words.length - 1) el.appendChild(document.createTextNode(" "));
+    });
   }
 
   function splitWords(el) {
@@ -562,8 +573,11 @@
   }
 
   function donePre() {
+    // Keep initial render anchored to top to avoid post-preloader jump.
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     if (preloader) preloader.classList.add("is-done");
     body.classList.remove("is-loading");
+    body.classList.add("is-ready");
   }
 
   function boot() {
@@ -588,8 +602,6 @@
     initForm();
     ScrollTrigger.refresh();
   }
-
-  body.classList.add("is-loading");
 
   if (prm) {
     donePre();

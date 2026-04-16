@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: auto;
+  scrollbar-gutter: stable;
 }
 
 html.lenis,
@@ -51,6 +52,13 @@ main {
 
 body.is-loading {
   overflow: hidden;
+}
+
+/* Prevent content flash before preloader animation starts */
+body:not(.is-ready) .head,
+body:not(.is-ready) main,
+body:not(.is-ready) .foot {
+  visibility: hidden;
 }
 
 .grain {
