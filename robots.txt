@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://taxlawyer.com.ua/sitemap.xml
+Sitemap: https://pfulawyer.com.ua/sitemap.txt
